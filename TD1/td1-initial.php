@@ -11,6 +11,10 @@ echo "</head>\n";
 
 echo "<body>\n";
 
+
+
+
+
 echo "<h1>Allo le monde ?</h1>\n" ;
 print "<h3>a l'eau, limande ?</h3> \n";
 
@@ -19,6 +23,12 @@ $uneVariable = "menthe";
 print $uneVariable . "<h2>Halo</h2>  \n" ;
 
 print "céfini \n";
+
+//2.variables et types
+$v1 = 42;
+$v2 = 73;
+print "Somme : " . $v1+$v2;
+print "\n Diff : " . $v1-$v2;
 
 print "</body>\n";
 print "</html>\n";
