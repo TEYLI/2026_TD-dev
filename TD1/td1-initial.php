@@ -1,10 +1,10 @@
 <?php
 
-echo "<strong>Allo le monde ?</strong>\n" ;
-print " a l'eau, limande ? \n";
+echo "<h1>Allo le monde ?</h1>\n" ;
+print "<h3>a l'eau, limande ?</h3> \n";
 
 $uneVariable = "menthe";
 
-print $uneVariable . "Halo  \n" ;
+print $uneVariable . "<h2>Halo</h2>  \n" ;
 
 print "céfini \n";
