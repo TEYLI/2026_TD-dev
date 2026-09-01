@@ -2,3 +2,5 @@
 et quand on l'appel par ligne de commande on va lire le texte brut donc \n.
 
 Pareil pour la balise strong le serveur interprete en html donc la premiere chaine s'affiche en gras alors que en ligne de commande il s'affiche de manière brut donc affiche <strong>.
+
+2/Il convertis temporairement la chaine en nombre entier ici 442 pour faire la somme.

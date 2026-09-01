@@ -30,6 +30,39 @@ $v2 = 73;
 print "Somme : " . $v1+$v2;
 print "\n Diff : " . $v1-$v2;
 
+print "<br>\n";
+print gettype($v1);
+print gettype($v2);
+
+print "<br>\n";
+$v1 = "422";
+$v2 = 73;
+print "Somme 2 : " . $v1+$v2;
+
+print "<br>\n";
+print gettype($v1);
+
+$val1 = 1337;      
+$val2 = 01337;      
+$val3 = 0x1337;    
+$val4 = 3.14159;    
+$val5 = "yopyop";   
+$val6 = 'yepyep';   
+$val7 = True;       
+$val8 = False;
+
+echo 'la variable $val1 est de type : ' . gettype($val1) . " et a pour valeur : " . $val1 . "\n";
+echo 'la variable $val2 est de type : ' . gettype($val2) . " et a pour valeur : " . $val2 . "\n";
+echo 'la variable $val3 est de type : ' . gettype($val3) . " et a pour valeur : " . $val3 . "\n";
+echo 'la variable $val4 est de type : ' . gettype($val4) . " et a pour valeur : " . $val4 . "\n";
+echo 'la variable $val5 est de type : ' . gettype($val5) . " et a pour valeur : " . $val5 . "\n";
+echo 'la variable $val6 est de type : ' . gettype($val6) . " et a pour valeur : " . $val6 . "\n";
+echo 'la variable $val7 est de type : ' . gettype($val7) . " et a pour valeur : " . $val7 . "\n";
+echo 'la variable $val8 est de type : ' . gettype($val8) . " et a pour valeur : " . $val8 . "\n";
+
+
+
+
 print "</body>\n";
 print "</html>\n";
 ?>
