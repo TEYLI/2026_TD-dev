@@ -60,8 +60,11 @@ echo 'la variable $val6 est de type : ' . gettype($val6) . " et a pour valeur : 
 echo 'la variable $val7 est de type : ' . gettype($val7) . " et a pour valeur : " . $val7 . "\n";
 echo 'la variable $val8 est de type : ' . gettype($val8) . " et a pour valeur : " . $val8 . "\n";
 
+echo "variable v1 : $v1";
+echo 'variable v2 : $v2';
 
-
+echo "la variable \$v1 vaut $v1\n";
+echo "la variable \"\$v2\" vaut $v2\n";
 
 print "</body>\n";
 print "</html>\n";
