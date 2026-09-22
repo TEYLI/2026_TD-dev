@@ -1,13 +1,11 @@
 <?php
-class AlbumTrack {
-    public string $titre;
+require_once 'AudioTrack.php';
+
+class AlbumTrack extends AudioTrack {
     public ?string $artiste = null;
     public string $album;
-    public ?int $annee = null ;
+    public ?int $annee = null;
     public int $numPiste;
-    public ?string $genre = null;
-    public ?int $duree = null;
-    public string $nomAudio;
     
     public function __construct(
         string $titrePiste,
@@ -15,8 +13,7 @@ class AlbumTrack {
         string $nomAlbum,
         int $numeroPiste
     ) {
-        $this->titre = $titrePiste;
-        $this->nomAudio = $cheminFichier;
+        parent::__construct($titrePiste, $cheminFichier);
         $this->album = $nomAlbum;
         $this->numPiste = $numeroPiste;
     }

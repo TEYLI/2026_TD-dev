@@ -1,41 +1,29 @@
 <?php
-class AlbumTrackRenderer {
-    const MODE_COMPACT = 1;
-    const MODE_LONG = 2;
+require_once 'AudioTrackRenderer.php';
 
-    public AlbumTrack $piste;
-
-    public function __construct(AlbumTrack $piste) {
-        $this->piste = $piste;
+class AlbumTrackRenderer extends AudioTrackRenderer {
+    
+    protected function renderCompact(): string {
+        $html = '<div class="track-container" style="margin-bottom: 20px;">';
+        $html .= "<p><em>Mode compact (Album)</em></p>";
+        $html .= '<strong>Titre : ' . $this->track->titre . '</strong><br>';
+        $html .= '<audio controls src="' . $this->track->nomAudio . '"></audio>';
+        $html .= '</div>';
+        return $html;
     }
 
-    public function render(int $selector): string {
-        $html = '<div class="track-container" style="margin-bottom: 20px;">';
+    protected function renderLong(): string {
+        $numPiste = ($this->track instanceof AlbumTrack) ? $this->track->numPiste : 'Inconnu';
         
-        switch ($selector) {
-            case self::MODE_COMPACT:
-                $html .= "<p><em>Mode compact</em></p>";
-                $html .= '<strong>Titre : ' . $this->piste->titre . '</strong><br>';
-                $html .= '<audio controls src="' . $this->piste->nomAudio . '"></audio>';
-                break;
-
-            case self::MODE_LONG:
-                $html .= "<p><em>Mode long</em></p>";
-                $html .= '<strong>Titre : ' . $this->piste->titre . '</strong><br>';
-                $html .= 'Numéro de la piste : ' . $this->piste->numPiste . '<br>';
-                $html .= '<audio controls style="width: 100%; margin-top: 10px;">';
-                $html .= '<source src="' . $this->piste->nomAudio . '" type="audio/mpeg">';
-                $html .= 'Votre navigateur ne supporte pas la balise audio.';
-                $html .= '</audio>';
-                break;
-
-            default:
-                $html .= "<p>Mode inconnu</p>";
-                break;
-        }
-
-        $html .= '</div>'; 
+        $html = '<div class="track-container" style="margin-bottom: 20px;">';
+        $html .= "<p><em>Mode long (Album)</em></p>";
+        $html .= '<strong>Titre : ' . $this->track->titre . '</strong><br>';
+        $html .= 'Numéro de la piste : ' . $numPiste . '<br>';
+        $html .= '<audio controls style="width: 100%; margin-top: 10px;">';
+        $html .= '<source src="' . $this->track->nomAudio . '" type="audio/mpeg">';
+        $html .= 'Votre navigateur ne supporte pas la balise audio.';
+        $html .= '</audio>';
+        $html .= '</div>';
         return $html;
     }
 }
-?>
