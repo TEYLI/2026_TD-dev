@@ -2,10 +2,10 @@
 require_once 'AudioTrack.php';
 
 class AlbumTrack extends AudioTrack {
-    public ?string $artiste = null;
-    public string $album;
-    public ?int $annee = null;
-    public int $numPiste;
+    protected ?string $artiste = null;
+    protected string $album;
+    protected ?int $annee = null;
+    protected int $numPiste;
     
     public function __construct(
         string $titrePiste,
@@ -18,6 +18,14 @@ class AlbumTrack extends AudioTrack {
         $this->numPiste = $numeroPiste;
     }
 
+    public function setArtiste(?string $artiste): void {
+        $this->artiste = $artiste;
+    }
+
+    public function setAnnee(?int $annee): void {
+        $this->annee = $annee;
+    }
+    
     public function __toString() : string {
         return json_encode(get_object_vars($this));
     }
