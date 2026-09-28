@@ -1,4 +1,7 @@
 <?php
+namespace iutnc\deefy\render;
+
+use iutnc\deefy\audio\tracks\AlbumTrack;
 require_once 'AudioTrackRenderer.php';
 
 class AlbumTrackRenderer extends AudioTrackRenderer {

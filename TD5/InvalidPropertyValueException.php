@@ -1,3 +1,5 @@
 <?php
-class InvalidPropertyValueException extends Exception {}
+namespace iutnc\deefy\exception;
+
+class InvalidPropertyValueException extends \Exception {}
 ?>
