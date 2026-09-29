@@ -1,8 +1,5 @@
 <?php
-require_once 'src/loader/Psr4ClassLoader.php';
-
-$loader = new \loader\Psr4ClassLoader("iutnc\\deefy\\", "src/classes");
-$loader->register();
+require_once 'vendor/autoload.php';
 
 use iutnc\deefy\audio\tracks\AlbumTrack;
 use iutnc\deefy\audio\tracks\PodcastTrack;
