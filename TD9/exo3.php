@@ -16,6 +16,6 @@ if(isset($_COOKIE['pistache'])){
     $valeur = 1;
 }
 setcookie('pistache', $valeur, $expiration);
-echo "c'est votre " . $_COOKIE['pistache'] +1 . "ème visites";
+echo "c'est votre " . $valeur . "ème visites";
 
 ?>
