@@ -1,6 +1,8 @@
 <?php
 use iutnc\deefy\action\AddUserAction;
 require_once 'vendor/autoload.php';
+use iutnc\deefy\repository\DeefyRepository;
+DeefyRepository::setConfig('db.config.ini');
 session_start();
 
 use iutnc\deefy\dispatch\Dispatcher;

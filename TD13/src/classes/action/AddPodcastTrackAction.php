@@ -58,8 +58,11 @@ HTML;
                     
                     $track = new PodcastTrack($titre, $nomGenere);
                     
-                   if (!empty($auteur)) { $track->setAuteur($auteur); }
+                    if (!empty($auteur)) { $track->setAuteur($auteur); }
                     if (!empty($duree)) { $track->setDuree((int)$duree); }
+
+                    $repo = \iutnc\deefy\repository\DeefyRepository::getInstance();
+                    $repo->saveTrack($track);
 
                     $_SESSION['playlist']->ajouterPiste($track);
 
